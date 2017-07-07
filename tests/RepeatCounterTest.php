@@ -38,7 +38,7 @@ class RepeatCounterTest extends PHPUnit_Framework_TestCase
 
         $result = $test_RepeatCounter->countRepeats($input_one, $input_two);
 
-        $this->assertEquals("count: 1", $result);
+        $this->assertEquals("count: 2", $result);
     }
 
 }
