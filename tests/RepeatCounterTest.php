@@ -23,9 +23,23 @@ class RepeatCounterTest extends PHPUnit_Framework_TestCase
         $input_one = "apple";
         $input_two = "apple";
 
+        //Act
+        $result = $test_RepeatCounter->countRepeats($input_one, $input_two);
+        //Assert
+        $this->assertEquals("count: 1", $result);
+    }
+
+    function testCountRepeatsMultiWord()
+    {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $input_one = "apple";
+        $input_two = "apple on my apple";
+
         $result = $test_RepeatCounter->countRepeats($input_one, $input_two);
 
         $this->assertEquals("count: 1", $result);
     }
+
 }
 ?>
