@@ -4,7 +4,7 @@ require_once "src/RepeatCounter.php";
 
 class RepeatCounterTest extends PHPUnit_Framework_TestCase
 {
-    function testCountRepeatsSinlgeWord()
+    function testCountRepeatsNoMatch()
     {
         //Arrange
         $test_RepeatCounter = new RepeatCounter;
@@ -14,6 +14,18 @@ class RepeatCounterTest extends PHPUnit_Framework_TestCase
         $result = $test_RepeatCounter->countRepeats($input_one, $input_two);
         //Assert
         $this->assertEquals("count: 0", $result);
+    }
+
+    function testCountRepeatsSingleWord()
+    {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $input_one = "apple";
+        $input_two = "apple";
+
+        $result = $test_RepeatCounter->countRepeats($input_one, $input_two);
+
+        $this->assertEquals("count: 1", $result);
     }
 }
 ?>
