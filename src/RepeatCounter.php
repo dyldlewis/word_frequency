@@ -5,6 +5,8 @@
         {
             if ($word_to_count != $string_to_use) {
                 return "count: 0";
+            } else {
+                return "count: 1";
             }
         }
     }
