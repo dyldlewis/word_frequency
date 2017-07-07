@@ -15,7 +15,7 @@ specs:
     -word to count: "hello"
     -string to use: "Hello, I am from the city hello"
     -output: "count: 2"
-* The program does not count words with special characters in them
-    -word to count: "it"
-    -string to use: "Well, it's a beautiful day"
-    -output: "count: 0"
+* The program will not count integers
+    -word to count: 45
+    -string to use: "It's 45 degrees outside"
+    -output: "Please enter words"

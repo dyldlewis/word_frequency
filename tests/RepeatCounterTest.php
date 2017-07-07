@@ -53,5 +53,17 @@ class RepeatCounterTest extends PHPUnit_Framework_TestCase
         $this->assertEquals("count: 2", $result);
     }
 
+    function testCountRepeatsInts()
+    {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $input_one = 45;
+        $input_two = "it's 45 degrees outside";
+
+        $result = $test_RepeatCounter->countRepeats($input_one, $input_two);
+
+        $this->assertEquals("Please enter words", $result);
+    }
+
 }
 ?>
