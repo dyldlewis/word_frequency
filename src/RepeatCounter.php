@@ -3,6 +3,7 @@
     {
         function countRepeats($word_to_count, $string_to_use)
         {
+            $string_to_use = strtolower($string_to_use);
             $string_to_use = explode(" ", $string_to_use);
             $counter = 0;
 
